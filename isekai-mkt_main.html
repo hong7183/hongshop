@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>이세계 마켓</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f3f6fa;
+        }
+        .topbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 8px 32px;
+            background: #1b3552;
+        }
+        .logo-area {
+            display: flex;
+            align-items: center;
+        }
+        .logo-area img {
+            height: 40px;
+            margin-right: 10px;
+            cursor: pointer;
+        }
+        .logo-area .site-name {
+            font-size: 1.6em;
+            color: #ffffff;
+            font-weight: bold;
+            letter-spacing: 1px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        .top-links a {
+            color: #96b2d6;
+            margin-left: 20px;
+            text-decoration: none;
+            font-size: 1em;
+            font-weight: 500;
+        }
+        .top-links a:hover {
+            color: #ffffff;
+            text-decoration: underline;
+        }
+        nav {
+            background: #25406b;
+            padding: 12px 0;
+            text-align: center;
+            font-size: 1.1em;
+        }
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: inline-block;
+        }
+        nav ul li {
+            display: inline-block;
+            position: relative;
+        }
+        nav ul li a {
+            color: #f3f6fa;
+            padding: 8px 24px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 3px;
+            transition: #1b3552;
+        }
+        /* Dropdown styles */
+        nav ul li .dropdown {
+            display: none;
+            position: absolute;
+            left: 0;
+            top: 100%;
+            background: #ffffff;
+            min-width: 160px;
+            box-shadow: 0 8px 24px rgba(27, 53, 82, 0.08);
+            z-index: 100;
+            border-radius: 0 0 5px 5px;
+        }
+        nav ul li:hover .dropdown {
+            display: block;
+        }
+        nav ul li .dropdown a {
+            color: #1b3552;
+            padding: 10px 18px;
+            display: block;
+            border-bottom: 1px solid #ecedf0;
+            background: #fff;
+            border-radius: 0;
+        }
+        nav ul li .dropdown a:hover {
+            background: #f3f6fa;
+            color: #25406b;
+        }
+        .banner {
+            background: linear-gradient(90deg, #1b3552 80%, #3d587a 100%);
+            color: #ffffff;
+            text-align: center;
+            padding: 40px 10px;
+            font-size: 1.2em;
+            letter-spacing: 1px;
+        }
+        .products {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 22px;
+            gap: 20px;
+        }
+        .product-card {
+            border: 1.5px solid #1b3552;
+            border-radius: 8px;
+            width: 200px;
+            text-align: center;
+            padding: 12px;
+            background: #fff;
+        }
+        .product-card img {
+            width: 100%;
+            height: 120px;
+            object-fit: cover;
+            border-radius: 4px;
+        }
+        .product-card .name {
+            font-weight: bold;
+            margin: 10px 0 5px 0;
+            color: #25406b;
+        }
+        .product-card .price {
+            color: #1b3552;
+            font-weight: bold;
+        }
+        footer {
+            background: #25406b;
+            color: #f3f6fa;
+            text-align: center;
+            padding: 12px;
+            font-size: 0.93em;
+            margin-top: 30px;
+        }
+        @media screen and (max-width: 700px) {
+            .products {
+                flex-direction: column;
+                align-items: center;
+            }
+            .topbar {
+                flex-direction: column;
+                gap: 8px;
+            }
+            nav ul li {
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="topbar">
+        <div class="logo-area">
+            <a href="index.html" class="site-name">이세계 마켓</a>
+        </div>
+        <div class="top-links">
+            <a href="#">로그인</a>
+            <a href="#">마이페이지</a>
+            <a href="#">고객센터</a>
+        </div>
+    </div>
+    <nav>
+        <ul>
+            <li>
+                <a href="#">카테고리</a>
+                <div class="dropdown">
+                    <a href="#">패션</a>
+                    <a href="#">뷰티/화장품</a>
+                    <a href="#">식품</a>
+                    <a href="#">전자제품</a>
+                    <a href="#">리빙</a>
+                    <a href="#">취미/문구</a>
+                    <a href="#">기타</a>
+                </div>
+            </li>
+            <li><a href="#">신상품</a></li>
+            <li><a href="#">베스트</a></li>
+            <li><a href="#">이벤트</a></li>
+            <li><a href="#">브랜드관</a></li>
+        </ul>
+    </nav>
+    <div class="banner">
+        지금 가입하고 첫 구매 혜택을 받아보세요!
+    </div>
+    <section class="products">
+        <div class="product-card">
+            <img src="product1.jpg" alt="상품1">
+            <div class="name">제품명1</div>
+            <div class="price">29,000원</div>
+        </div>
+        <div class="product-card">
+            <img src="product2.jpg" alt="상품2">
+            <div class="name">제품명2</div>
+            <div class="price">49,000원</div>
+        </div>
+        <div class="product-card">
+            <img src="product3.jpg" alt="상품3">
+            <div class="name">제품명3</div>
+            <div class="price">15,000원</div>
+        </div>
+        <!-- 상품 카드 추가 가능 -->
+    </section>
+    <footer>
+        &copy; 2025 이세계 마켓. All rights reserved. 문의: help@isekai-mkt.com
+    </footer>
+</body>
+</html>
