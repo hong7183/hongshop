@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>이세계 마켓 - 로그인</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f3f6fa;
+    }
+
+    /* 상단바 */
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 8px 32px;
+      background: #1b3552;
+    }
+    .logo-area {
+      display: flex;
+      align-items: center;
+    }
+    .logo-area img {
+      height: 40px;
+      margin-right: 10px;
+      cursor: pointer;
+    }
+    .logo-area .site-name {
+      font-size: 1.6em;
+      color: #ffffff;
+      font-weight: bold;
+      letter-spacing: 1px;
+      cursor: pointer;
+      text-decoration: none;
+    }
+    .top-links a {
+      color: #96b2d6;
+      margin-left: 20px;
+      text-decoration: none;
+      font-size: 1em;
+      font-weight: 500;
+    }
+    .top-links a:hover {
+      color: #ffffff;
+      text-decoration: underline;
+    }
+
+    /* 네비게이션 */
+    nav {
+      background: #25406b;
+      padding: 12px 0;
+      text-align: center;
+      font-size: 1.1em;
+    }
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: inline-block;
+    }
+    nav ul li {
+      display: inline-block;
+      position: relative;
+    }
+    nav ul li a {
+      color: #f3f6fa;
+      padding: 8px 24px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav ul li a:hover {
+      background: #1b3552;
+      border-radius: 4px;
+    }
+
+    /* 배너 */
+    .banner {
+      background: linear-gradient(90deg, #1b3552, #3d587a);
+      color: #fff;
+      text-align: center;
+      padding: 35px 10px;
+      font-size: 1.2em;
+      letter-spacing: 1px;
+    }
+
+    /* 로그인 박스 */
+    .login-container {
+      background: white;
+      max-width: 400px;
+      margin: 60px auto;
+      padding: 40px 35px;
+      border-radius: 12px;
+      box-shadow: 0 8px 24px rgba(27, 53, 82, 0.15);
+    }
+    .login-container h2 {
+      text-align: center;
+      color: #1b3552;
+      margin-bottom: 25px;
+      font-weight: 700;
+    }
+    .login-container label {
+      display: block;
+      margin: 12px 0 6px;
+      color: #25406b;
+      font-weight: 600;
+      text-align: left;
+    }
+    .login-container input {
+      width: 100%;
+      padding: 12px 14px;
+      border: 1.5px solid #1b3552;
+      border-radius: 6px;
+      margin-bottom: 15px;
+      box-sizing: border-box;
+      font-size: 1em;
+    }
+    .login-container input:focus {
+      border-color: #25406b;
+      outline: none;
+    }
+
+    .login-container button {
+      width: 100%;
+      padding: 14px;
+      background: #1b3552;
+      border: none;
+      color: white;
+      font-size: 1.15em;
+      font-weight: 600;
+      border-radius: 6px;
+      cursor: pointer;
+      margin-top: 10px;
+      transition: background 0.3s;
+    }
+    .login-container button:hover {
+      background: #25406b;
+    }
+
+    .link-area {
+      margin-top: 20px;
+      text-align: center;
+      font-size: 0.9em;
+    }
+    .link-area a {
+      color: #1b3552;
+      text-decoration: none;
+      font-weight: 600;
+      margin: 0 5px;
+    }
+    .link-area a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      background: #25406b;
+      color: #f3f6fa;
+      text-align: center;
+      padding: 12px;
+      font-size: 0.93em;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+  <!-- 상단 -->
+  <div class="topbar">
+    <div class="logo-area">
+      <a href="isekai-mkt_main.html">
+        <img src="img/generated-image (2).png" alt="이세계 마켓 로고">
+      </a>
+      <a href="isekai-mkt_main.html" class="site-name">이세계 마켓</a>
+    </div>
+    <div class="top-links">
+      <a href="login.html">로그인</a>
+      <a href="isekai-mkt_mypage.html">마이페이지</a>
+      <a href="isekai-mkt_cart.html">장바구니</a>
+      <a href="isekai-mkt_cs.html">고객센터</a>
+    </div>
+  </div>
+
+  <!-- 네비 -->
+  <nav>
+    <ul>
+      <li><a href="#">카테고리</a></li>
+      <li><a href="isekai-mkt_new.html">신상품</a></li>
+      <li><a href="isekai-mkt_best.html">베스트</a></li>
+      <li><a href="isekai-mkt_event.html">이벤트</a></li>
+      <li><a href="isekai-mkt_brand.html">브랜드관</a></li>
+    </ul>
+  </nav>
+
+  <!-- 배너 -->
+  <div class="banner">
+    🔑 로그인 후 다양한 혜택과 서비스를 이용하세요!
+  </div>
+
+  <!-- 로그인 -->
+  <div class="login-container">
+    <h2>로그인</h2>
+    <form action="#" method="POST">
+      <label for="username">아이디</label>
+      <input type="text" id="username" name="username" placeholder="아이디 입력" required />
+
+      <label for="password">비밀번호</label>
+      <input type="password" id="password" name="password" placeholder="비밀번호 입력" required />
+
+      <button type="submit">로그인</button>
+    </form>
+
+    <div class="link-area">
+      <a href="isekai-mkt_singup.html">회원가입</a> | 
+      <a href="#">아이디 찾기</a> | 
+      <a href="#">비밀번호 찾기</a>
+    </div>
+  </div>
+
+  <!-- 푸터 -->
+  <footer>
+    &copy; 2025 이세계 마켓. All rights reserved. 문의: help@isekai-mkt.com
+  </footer>
+</body>
+</html>

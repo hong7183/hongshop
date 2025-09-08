@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>장바구니 - 이세계 마켓</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f3f6fa;
+        }
+        .topbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 8px 32px;
+            background: #1b3552;
+        }
+        .logo-area {
+            display: flex;
+            align-items: center;
+        }
+        .logo-area img {
+            height: 40px;
+            margin-right: 10px;
+            cursor: pointer;
+        }
+        .logo-area .site-name {
+            font-size: 1.6em;
+            color: #ffffff;
+            font-weight: bold;
+            letter-spacing: 1px;
+            text-decoration: none;
+        }
+        .top-links a {
+            color: #96b2d6;
+            margin-left: 20px;
+            text-decoration: none;
+            font-size: 1em;
+            font-weight: 500;
+        }
+        .top-links a:hover {
+            color: #ffffff;
+            text-decoration: underline;
+        }
+        h2 {
+            text-align: center;
+            padding: 20px;
+            color: #1b3552;
+        }
+        .cart-container {
+            max-width: 900px;
+            margin: auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            border: 1.5px solid #1b3552;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        table thead {
+            background: #25406b;
+            color: #fff;
+        }
+        table th, table td {
+            padding: 12px;
+            border-bottom: 1px solid #ddd;
+            text-align: center;
+        }
+        table td img {
+            width: 70px;
+            border-radius: 4px;
+        }
+        .total-area {
+            text-align: right;
+            margin-top: 20px;
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #1b3552;
+        }
+        .btn-area {
+            text-align: right;
+            margin-top: 20px;
+        }
+        .btn-area a {
+            display: inline-block;
+            padding: 10px 20px;
+            background: #25406b;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 4px;
+            margin-left: 10px;
+        }
+        .btn-area a:hover {
+            background: #1b3552;
+        }
+        footer {
+            background: #25406b;
+            color: #f3f6fa;
+            text-align: center;
+            padding: 12px;
+            font-size: 0.93em;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="topbar">
+        <div class="logo-area">
+            <img src="img/generated-image (2).png" alt="로고">
+            <a href="isekai-mkt_main.html" class="site-name">이세계 마켓</a>
+        </div>
+        <div class="top-links">
+            <a href="isekai-mkt_login.html">로그인</a>
+            <a href="isekai-mkt_mypage.html">마이페이지</a>
+            <a href="isekai-mkt_cart.html">장바구니</a>
+            <a href="isekai-mkt_cs.html">고객센터</a>
+        </div>
+    </div>
+    <h2>장바구니</h2>
+    <div class="cart-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>상품</th>
+                    <th>이름</th>
+                    <th>가격</th>
+                    <th>수량</th>
+                    <th>합계</th>
+                    <th>삭제</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><img src="product1.jpg" alt="상품1"></td>
+                    <td>제품명1</td>
+                    <td>29,000원</td>
+                    <td><input type="number" value="1" min="1" style="width: 50px;"></td>
+                    <td>29,000원</td>
+                    <td><button></button>❌</td>
+                </tr>
+                <tr>
+                    <td><img src="product2.jpg" alt="상품2"></td>
+                    <td>제품명2</td>
+                    <td>49,000원</td>
+                    <td><input type="number" value="1" min="1" style="width: 50px;"></td>
+                    <td>49,000원</td>
+                    <td><button></button>❌</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="total-area">
+            총합계: <span>78,000원</span>
+        </div>
+        <div class="btn-area">
+            <a href="isekai-mkt_main.html">쇼핑 계속하기</a>
+            <a href="isekai-mkt_checkout.html">결제하기</a>
+        </div>
+    </div>
+    <footer>
+        &copy; 2025 이세계 마켓. All rights reserved. 문의: help@isekai-mkt.com
+    </footer>
+</body>
+</html>

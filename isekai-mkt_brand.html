@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>브랜드관 - 이세계 마켓</title>
+  <style>
+    body {
+      margin: 0; font-family: Arial, sans-serif; background: #f3f6fa; display: flex; flex-direction: column; min-height: 100vh;
+    }
+    .topbar {
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 8px 32px; background: #1b3552;
+      flex-shrink: 0;
+    }
+    .logo-area {
+      display: flex; align-items: center;
+    }
+    .logo-area img {
+      height: 40px; margin-right: 10px; cursor: pointer;
+    }
+    .site-name {
+      font-size: 1.6em; color: #fff; font-weight: bold; text-decoration: none;
+    }
+    .top-links a {
+      color: #96b2d6; margin-left: 20px; text-decoration: none; font-weight: 500;
+    }
+    .top-links a:hover {
+      color: #fff; text-decoration: underline;
+    }
+    nav {
+      background: #25406b; padding: 12px 0; text-align: center;
+      flex-shrink: 0;
+    }
+    nav ul {
+      list-style: none; margin: 0; padding: 0; display: inline-block;
+    }
+    nav ul li {
+      display: inline-block; position: relative;
+    }
+    nav ul li a {
+      color: #f3f6fa; padding: 8px 24px; font-weight: bold; text-decoration: none;
+    }
+    nav ul li a:hover {
+      background: #1b3552;
+    }
+    nav ul li .dropdown {
+      display: none; position: absolute; top: 100%; left: 0; background: #fff;
+      min-width: 160px; box-shadow: 0 8px 24px rgba(0,0,0,.1);
+    }
+    nav ul li:hover .dropdown {
+      display: block;
+    }
+    nav ul li .dropdown a {
+      color: #1b3552; padding: 10px 18px; display: block; border-bottom: 1px solid #eee;
+    }
+
+    /* 왼쪽 사이드바 */
+    .main-container {
+      display: flex; flex: 1; max-width: 1200px; margin: 20px auto; background: #fff; border-radius: 16px; box-shadow: 0 4px 20px rgba(27,53,82,0.1);
+      overflow: hidden;
+      min-height: 600px;
+    }
+    .sidebar {
+      width: 250px;
+      background: #25406b;
+      color: #fff;
+      padding: 24px 10px;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      overflow-y: auto;
+    }
+    .sidebar h3 {
+      margin: 0 0 12px 12px;
+      font-size: 1.3em;
+      border-bottom: 2px solid #fd944f;
+      padding-bottom: 8px;
+      font-weight: bold;
+      user-select: none;
+    }
+    .brand-link {
+      display: block;
+      color: #eee;
+      text-decoration: none;
+      font-size: 1.05em;
+      padding: 8px 12px;
+      border-radius: 8px;
+      transition: background 0.3s, color 0.3s;
+      user-select: none;
+    }
+    .brand-link:hover, .brand-link.active {
+      background: #1b3552;
+      color: #fd944f;
+    }
+
+    .content-area {
+      flex: 1;
+      padding: 28px 36px;
+      overflow-y: auto;
+    }
+    .banner {
+      background: linear-gradient(90deg,#127d7e 80%,#52a3b6 100%);
+      color: #fff; text-align: center; padding: 36px 10px; font-size: 1.28em; font-weight: bold; border-radius: 12px;
+      margin-bottom: 24px;
+      user-select: none;
+    }
+    .brand-products {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 24px;
+      justify-content: flex-start;
+    }
+    .brand-product {
+      background: #fefefe;
+      box-shadow: 0 8px 32px rgba(27,53,82,0.09);
+      border-radius: 16px;
+      width: 260px;
+      padding: 22px 14px;
+      text-align: center;
+      transition: box-shadow 0.25s;
+      cursor: pointer;
+    }
+    .brand-product:hover {
+      box-shadow: 0 12px 44px rgba(27,53,82,0.15);
+    }
+    .brand-product img {
+      width: 160px; height: 160px; object-fit: cover; border-radius: 12px; margin-bottom: 12px;
+      user-select: none;
+    }
+    .brand-product .brand {
+      color: #127d7e; font-weight: 700; margin-bottom: 5px; font-size: 1.03em;
+    }
+    .brand-product .name {
+      font-size: 1.15em; color: #25406b; font-weight: bold; margin-bottom: 6px;
+      user-select: none;
+    }
+    .brand-product .price {
+      color: #116553; font-weight: bold; font-size: 1.12em;
+      user-select: none;
+    }
+    .brand-product .desc {
+      color: #919699; font-size: .98em; margin-top: 7px;
+    }
+    footer {
+      background: #25406b;
+      color: #f3f6fa;
+      text-align: center;
+      padding: 12px;
+      font-size: .93em;
+      margin-top: auto;
+      user-select: none;
+    }
+    @media (max-width:768px) {
+      .main-container {
+        flex-direction: column;
+        max-width: 100%;
+        margin: 0;
+        border-radius: 0;
+        box-shadow: none;
+      }
+      .sidebar {
+        width: 100%;
+        flex-direction: row;
+        overflow-x: auto;
+        padding: 10px;
+      }
+      .brand-link {
+        white-space: nowrap;
+        padding: 8px 16px;
+      }
+      .content-area {
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <div class="logo-area">
+      <img src="img/generated-image (2).png" alt="이세계 마켓 로고" />
+      <a href="isekai-mkt_main.html" class="site-name">이세계 마켓</a>
+    </div>
+    <div class="top-links">
+      <a href="isekai-mkt_login.html">로그인</a>
+      <a href="isekai-mkt_mypage.html">마이페이지</a>
+      <a href="isekai-mkt_cart.html">장바구니</a>
+      <a href="isekai-mkt_cs.html">고객센터</a>
+    </div>
+  </div>
+  <nav>
+    <ul>
+      <li><a href="#">카테고리</a>
+        <div class="dropdown">
+          <a href="isekai-mkt_fashion.html">패션</a>
+          <a href="isekai-mkt_beauty.html">뷰티/화장품</a>
+          <a href="isekai-mkt_food.html">식품</a>
+          <a href="isekai-mkt_elec.html">전자제품</a>
+          <a href="isekai-mkt_living.html">리빙</a>
+          <a href="isekai-mkt_hobby.html">취미/문구</a>
+          <a href="isekai-mkt_etc.html">기타</a>
+        </div>
+      </li>
+      <li><a href="isekai-mkt_new.html">신상품</a></li>
+      <li><a href="isekai-mkt_best.html">베스트</a></li>
+      <li><a href="isekai-mkt_event.html">이벤트</a></li>
+      <li><a href="isekai-mkt_brand.html">브랜드관</a></li>
+    </ul>
+  </nav>
+
+  <div class="main-container">
+    <aside class="sidebar">
+      <h3>브랜드</h3>
+      <a href="isekai-mkt_brand_a.html" class="brand-link">브랜드A</a>
+      <a href="isekai-mkt_brand_b.html" class="brand-link">브랜드B</a>
+      <a href="isekai-mkt_brand_c.html" class="brand-link">브랜드C</a>
+      <a href="isekai-mkt_brand_d.html" class="brand-link">브랜드D</a>
+      <a href="isekai-mkt_brand_e.html" class="brand-link">브랜드E</a>
+      <!-- 브랜드 추가 -->
+    </aside>
+    <main class="content-area">
+      <div class="banner">브랜드 인기상품 TOP</div>
+      <div class="brand-products">
+        <div class="brand-product">
+          <img src="brand_a_best1.jpg" alt="브랜드A 인기상품"/>
+          <div class="brand">브랜드A</div>
+          <div class="name">프리미엄 토스터</div>
+          <div class="price">59,000원</div>
+          <div class="desc">최신 기술과 세련된 디자인</div>
+        </div>
+        <div class="brand-product">
+          <img src="brand_b_best1.jpg" alt="브랜드B 인기상품"/>
+          <div class="brand">브랜드B</div>
+          <div class="name">초음파 미용 마사지기</div>
+          <div class="price">128,000원</div>
+          <div class="desc">SNS 화제의 뷰티템</div>
+        </div>
+        <div class="brand-product">
+          <img src="brand_c_best1.jpg" alt="브랜드C 인기상품"/>
+          <div class="brand">브랜드C</div>
+          <div class="name">스마트 무선 진공청소기</div>
+          <div class="price">219,000원</div>
+          <div class="desc">효율적인 청소의 혁신</div>
+        </div>
+        <div class="brand-product">
+          <img src="brand_d_best1.jpg" alt="브랜드D 인기상품"/>
+          <div class="brand">브랜드D</div>
+          <div class="name">패밀리오븐 세트</div>
+          <div class="price">199,000원</div>
+          <div class="desc">가족을 위한 완벽한 선택</div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <footer>&copy;2025 이세계 마켓. All rights reserved. 문의: help@isekai-mkt.com</footer>
+</body>
+</html>
+

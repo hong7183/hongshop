@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>이세계 마켓 - 마이페이지</title>
+  <style>
+    body { margin: 0; font-family: Arial, sans-serif; background: #f3f6fa; }
+
+    /* 상단/네비/푸터 재사용 */
+    .topbar { display: flex; justify-content: space-between; align-items: center; padding: 8px 32px; background: #1b3552; }
+    .logo-area { display: flex; align-items: center; }
+    .logo-area img { height: 40px; margin-right: 10px; cursor: pointer; }
+    .logo-area .site-name { font-size: 1.6em; color: #fff; font-weight: bold; text-decoration: none; }
+    .top-links a { color: #96b2d6; margin-left: 20px; text-decoration: none; }
+    .top-links a:hover { color: #fff; text-decoration: underline; }
+
+    nav { background: #25406b; padding: 12px 0; text-align: center; }
+    nav ul { list-style: none; margin: 0; padding: 0; display: inline-block; }
+    nav ul li { display: inline-block; }
+    nav ul li a { color: #f3f6fa; padding: 8px 24px; text-decoration: none; font-weight: bold; }
+    nav ul li a:hover { background: #1b3552; border-radius: 4px; }
+
+    .banner { background: linear-gradient(90deg, #1b3552, #3d587a); color: #fff; text-align: center; padding: 30px 10px; font-size: 1.2em; }
+
+    /* 안내 박스 */
+    .locked-container {
+      background: #fff;
+      max-width: 500px;
+      margin: 80px auto;
+      padding: 40px 35px;
+      border-radius: 12px;
+      box-shadow: 0 8px 24px rgba(27, 53, 82, 0.15);
+      text-align: center;
+    }
+    .locked-container h2 {
+      color: #1b3552;
+      margin-bottom: 20px;
+      font-weight: 700;
+    }
+    .locked-container p {
+      color: #333;
+      margin-bottom: 30px;
+      font-size: 1.05em;
+    }
+    .locked-container a button {
+      padding: 12px 26px;
+      background: #1b3552;
+      border: none;
+      color: white;
+      font-size: 1.05em;
+      font-weight: 600;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    .locked-container a button:hover {
+      background: #25406b;
+    }
+
+    footer { background: #25406b; color: #f3f6fa; text-align: center; padding: 12px; font-size: 0.93em; margin-top: 60px; }
+  </style>
+</head>
+<body>
+  <!-- 상단 -->
+  <div class="topbar">
+    <div class="logo-area">
+      <a href="isekai-mkt_main.html"><img src="img/generated-image (2).png" alt="로고"></a>
+      <a href="isekai-mkt_main.html" class="site-name">이세계 마켓</a>
+    </div>
+    <div class="top-links">
+      <a href="isekai-mkt_login.html">로그인</a>
+      <a href="isekai-mkt_mypage.html">마이페이지</a>
+      <a href="isekai-mkt_cart.html">장바구니</a>
+      <a href="isekai-mkt_cs.html">고객센터</a>
+    </div>
+  </div>
+
+  <!-- 네비 -->
+  <nav>
+    <ul>
+      <li><a href="#">카테고리</a></li>
+      <li><a href="isekai-mkt_new.html">신상품</a></li>
+      <li><a href="isekai-mkt_best.html">베스트</a></li>
+      <li><a href="isekai-mkt_event.html">이벤트</a></li>
+      <li><a href="isekai-mkt_brand.html">브랜드관</a></li>
+    </ul>
+  </nav>
+
+  <!-- 배너 -->
+  <div class="banner">🔒 마이페이지 접근 제한</div>
+
+  <!-- 내용을 로그인 유도 -->
+  <div class="locked-container">
+    <h2>로그인 후 이용 가능합니다.</h2>
+    <p>마이페이지는 회원 전용 서비스입니다.<br>로그인 후 이용해 주세요.</p>
+    <a href="isekai-mkt_login.html"><button>로그인하기</button></a>
+  </div>
+
+  <!-- 푸터 -->
+  <footer>&copy; 2025 이세계 마켓. All rights reserved. 문의: help@isekai-mkt.com</footer>
+</body>
+</html>

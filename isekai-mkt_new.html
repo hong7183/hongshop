@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>신상품 - 이세계 마켓</title>
+    <style>
+        body {
+            margin:0;
+            font-family:Arial,sans-serif;
+            background:#f3f6fa;
+        }
+        .topbar {
+            display:flex; 
+            justify-content:space-between;
+            align-items:center;
+            padding:8px 32px; 
+            background:#1b3552;
+        }
+        .logo-area {
+            display:flex; 
+            align-items:center;
+        }
+        .logo-area img { 
+            height:40px; 
+            margin-right:10px; 
+            cursor:pointer; 
+        }
+        .site-name { 
+            font-size:1.6em; 
+            color:#fff; 
+            font-weight:bold; 
+            text-decoration:none; 
+        }
+        .top-links a {
+            color:#96b2d6; 
+            margin-left:20px; 
+            text-decoration:none; 
+            font-weight:500;
+        }
+        .top-links a:hover { 
+            color:#fff; 
+            text-decoration:underline; 
+        }
+        nav { 
+            background:#25406b; 
+            padding:12px 0; 
+            text-align:center; 
+        }
+        nav ul { 
+            list-style:none; 
+            margin:0; 
+            padding:0; 
+            display:inline-block; 
+        }
+        nav ul li { 
+            display:inline-block; 
+            position:relative; 
+        }
+        nav ul li a { 
+            color:#f3f6fa; 
+            padding:8px 24px; 
+            font-weight:bold; 
+            text-decoration:none;
+        }
+        nav ul li a:hover { 
+            background:#1b3552; 
+        }
+        nav ul li .dropdown {
+            display:none; 
+            position:absolute; 
+            top:100%; left:0;
+            background:#fff; 
+            min-width:160px;
+            box-shadow:0 8px 24px rgba(0,0,0,.1);
+        }
+        nav ul li:hover .dropdown { 
+            display:block; 
+        }
+        nav ul li .dropdown a { 
+            color:#1b3552; 
+            padding:10px 18px; 
+            display:block; 
+            border-bottom:1px solid #eee; 
+        }
+        .banner {
+            background:linear-gradient(90deg,#1b3552 80%,#3d587a 100%);
+            color:#fff; 
+            text-align:center; 
+            padding:40px 10px; 
+            font-size:1.2em;
+        }
+        .main-product {
+            max-width:900px;
+            margin:0 auto 30px auto;
+            background:#fff;
+            border-radius:24px;
+            box-shadow:0 12px 44px rgba(27,53,82,0.13);
+            padding:36px 15px;
+            text-align:center;
+        }
+        .main-product img {
+            width:330px; 
+            height:330px; 
+            object-fit:cover; 
+            border-radius:16px;
+            box-shadow:0 6px 32px rgba(0,0,0,0.18); 
+            margin-bottom:22px;
+        }
+        .main-product .name {
+            font-size:2em; 
+            font-weight:bold; 
+            color:#25406b; 
+            text-decoration:none;
+        }
+        .main-product .price {
+            font-size:1.35em; 
+            color:#1b3552; 
+            font-weight:bold; 
+            margin-top:12px;
+        }
+        .main-product .desc {
+            color:#7e8595; 
+            font-size:1.1em; 
+            margin-top:8px;
+        }
+        .product-list {
+            max-width:900px; 
+            margin:20px auto; 
+            padding:10px;
+        }
+        .product-item {
+            display:flex; 
+            align-items:center;
+            border-bottom:1px solid #ddd; 
+            padding:12px 0; 
+            background:#fff; 
+            border-radius:9px; 
+            margin-bottom:10px;
+        }
+        .product-item img {
+            width:120px; 
+            height:120px; 
+            object-fit:cover; 
+            border-radius:6px; 
+            margin-right:20px;
+        }
+        .product-item .info { 
+            flex:1; 
+        }
+        .product-item .name {
+            display:block; 
+            font-weight:bold; 
+            font-size:1.1em; 
+            color:#25406b; 
+            margin-bottom:6px; 
+            text-decoration:none;
+        }
+        .product-item .name:hover { 
+            text-decoration:underline; 
+        }
+        .product-item .price { 
+            color:#1b3552; 
+            font-weight:bold; 
+        }
+        footer {
+            background:#25406b; 
+            color:#f3f6fa; 
+            text-align:center; 
+            padding:12px; 
+            font-size:.93em;
+            margin-top:30px;
+        }
+        @media (max-width:600px) {
+            .main-product img{width:180px;height:180px;}
+            .main-product{padding:20px 4px;}
+            .product-list {max-width:99vw; padding:2px;}
+            .product-item img{width:74px;height:74px;}
+        }
+    </style>
+</head>
+<body>
+  <div class="topbar">
+    <div class="logo-area">
+      <img src="img/generated-image (2).png" alt="">
+      <a href="isekai-mkt_main.html" class="site-name">이세계 마켓</a>
+    </div>
+    <div class="top-links">
+      <a href="isekai-mkt_login.html">로그인</a>
+      <a href="isekai-mkt_mypage.html">마이페이지</a>
+      <a href="isekai-mkt_cart.html">장바구니</a>
+      <a href="isekai-mkt_cs.html">고객센터</a>
+    </div>
+  </div>
+  <nav>
+    <ul>
+      <li><a href="#">카테고리</a>
+        <div class="dropdown">
+          <a href="isekai-mkt_fashion.html">패션</a>
+          <a href="isekai-mkt_beauty.html">뷰티/화장품</a>
+          <a href="isekai-mkt_food.html">식품</a>
+          <a href="isekai-mkt_elec.html">전자제품</a>
+          <a href="isekai-mkt_living.html">리빙</a>
+          <a href="isekai-mkt_hobby.html">취미/문구</a>
+          <a href="isekai-mkt_etc.html">기타</a>
+        </div>
+      </li>
+      <li><a href="isekai-mkt_new.html">신상품</a></li>
+      <li><a href="isekai-mkt_best.html">베스트</a></li>
+      <li><a href="isekai-mkt_event.html">이벤트</a></li>
+      <li><a href="isekai-mkt_brand.html">브랜드관</a></li>
+    </ul>
+  </nav>
+  <div class="banner">신상품 카테고리</div>
+
+  <!-- 대표상품 부분 -->
+  <div class="main-product">
+      <a href="isekai-mkt_product_n1.html"><img src="newtop1.jpg" alt="신상품 대표"></a>
+      <div>
+        <a href="isekai-mkt_product_n1.html" class="name">신상품 대표상품명</a>
+        <div class="price">123,456원</div>
+        <div class="desc">신상품 대표 간단 설명입니다.</div>
+      </div>
+  </div>
+
+  <div class="product-list">
+    <div class="product-item">
+      <a href="isekai-mkt_product_n2.html"><img src="new2.jpg" alt="상품2"></a>
+      <div class="info">
+        <a href="isekai-mkt_product_n2.html" class="name">신상품 2번명</a>
+        <div class="price">23,300원</div>
+      </div>
+    </div>
+    <div class="product-item">
+      <a href="isekai-mkt_product_n3.html"><img src="new3.jpg" alt="상품3"></a>
+      <div class="info">
+        <a href="isekai-mkt_product_n3.html" class="name">신상품 3번명</a>
+        <div class="price">44,150원</div>
+      </div>
+    </div>
+    <div class="product-item">
+      <a href="isekai-mkt_product_n4.html"><img src="new4.jpg" alt="상품4"></a>
+      <div class="info">
+        <a href="isekai-mkt_product_n4.html" class="name">신상품 4번명</a>
+        <div class="price">58,400원</div>
+      </div>
+    </div>
+    <!-- 추가 상품 계속 -->
+  </div>
+  <footer>&copy;2025 이세계 마켓. All rights reserved. 문의: help@isekai-mkt.com</footer>
+</body>
+</html>

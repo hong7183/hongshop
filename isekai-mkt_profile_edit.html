@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>회원 정보 수정 - 이세계 마켓</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f3f6fa;
+        }
+        .topbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 8px 32px;
+            background: #1b3552;
+            flex-wrap: wrap;
+        }
+        .logo-area {
+            display: flex;
+            align-items: center;
+        }
+        .logo-area img {
+            height: 40px;
+            margin-right: 10px;
+            cursor: pointer;
+        }
+        .logo-area .site-name {
+            font-size: 1.6em;
+            color: #ffffff;
+            font-weight: bold;
+            letter-spacing: 1px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        .top-links a {
+            color: #96b2d6;
+            margin-left: 20px;
+            text-decoration: none;
+            font-size: 1em;
+            font-weight: 500;
+        }
+        .top-links a:hover {
+            color: #ffffff;
+            text-decoration: underline;
+        }
+        nav {
+            background: #25406b;
+            padding: 12px 0;
+            text-align: center;
+            font-size: 1.1em;
+        }
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: inline-block;
+        }
+        nav ul li {
+            display: inline-block;
+            position: relative;
+        }
+        nav ul li a {
+            color: #f3f6fa;
+            padding: 8px 24px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 3px;
+            transition: #1b3552;
+        }
+        nav ul li .dropdown {
+            display: none;
+            position: absolute;
+            left: 0;
+            top: 100%;
+            background: #ffffff;
+            min-width: 160px;
+            box-shadow: 0 8px 24px rgba(27, 53, 82, 0.08);
+            z-index: 100;
+            border-radius: 0 0 5px 5px;
+        }
+        nav ul li:hover .dropdown {
+            display: block;
+        }
+        nav ul li .dropdown a {
+            color: #1b3552;
+            padding: 10px 18px;
+            display: block;
+            border-bottom: 1px solid #ecedf0;
+            background: #fff;
+            border-radius: 0;
+        }
+        nav ul li .dropdown a:hover {
+            background: #f3f6fa;
+            color: #25406b;
+        }
+        h2 {
+            text-align: center;
+            padding: 20px;
+            color: #1b3552;
+        }
+        .profile-container {
+            max-width: 700px;
+            margin: auto;
+            background: #fff;
+            padding: 25px;
+            border-radius: 8px;
+            border: 1.5px solid #1b3552;
+        }
+        label {
+            display: block;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1em;
+        }
+        .form-buttons {
+            margin-top: 25px;
+            display: flex;
+            justify-content: flex-end;
+            gap: 12px;
+        }
+        .btn {
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1em;
+            cursor: pointer;
+        }
+        .save-btn {
+            background: #25406b;
+            color: #fff;
+        }
+        .save-btn:hover {
+            background: #1b3552;
+        }
+        .cancel-btn {
+            background: #ccc;
+            color: #333;
+        }
+        .cancel-btn:hover {
+            background: #999;
+            color: #fff;
+        }
+        footer {
+            background: #25406b;
+            color: #f3f6fa;
+            text-align: center;
+            padding: 12px;
+            font-size: 0.93em;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 상단바 -->
+    <div class="topbar">
+        <div class="logo-area">
+            <img src="img/generated-image (2).png" alt="로고">
+            <a href="isekai-mkt_main.html" class="site-name">이세계 마켓</a>
+        </div>
+        <div class="top-links">
+            <a href="isekai-mkt_login.html">로그인</a>
+            <a href="isekai-mkt_mypage.html">마이페이지</a>
+            <a href="isekai-mkt_cart.html">장바구니</a>
+            <a href="isekai-mkt_cs.html">고객센터</a>
+        </div>
+    </div>
+
+    <!-- 네비게이션 메뉴 -->
+    <nav>
+        <ul>
+            <li>
+                <a href="#">카테고리</a>
+                <div class="dropdown">
+                    <a href="isekai-mkt_fashion.html">패션</a>
+                    <a href="isekai-mkt_beauty.html">뷰티/화장품</a>
+                    <a href="isekai-mkt_food.html">식품</a>
+                    <a href="isekai-mkt_elec.html">전자제품</a>
+                    <a href="isekai-mkt_living.html">리빙</a>
+                    <a href="isekai-mkt_hobby.html">취미/문구</a>
+                    <a href="isekai-mkt_etc.html">기타</a>
+                </div>
+            </li>
+            <li><a href="isekai-mkt_new.html">신상품</a></li>
+            <li><a href="isekai-mkt_best.html">베스트</a></li>
+            <li><a href="isekai-mkt_event.html">이벤트</a></li>
+            <li><a href="isekai-mkt_brand.html">브랜드관</a></li>
+        </ul>
+    </nav>
+    <!--본문-->
+    <h2>회원 정보 수정</h2>
+    <div class="profile-container">
+        <label>아이디 (변경 불가)</label>
+        <input type="text" value="user1234" disabled>
+
+        <label>비밀번호 변경</label>
+        <input type="password" placeholder="새 비밀번호 입력">
+
+        <label>비밀번호 확인</label>
+        <input type="password" placeholder="비밀번호 다시 입력">
+
+        <label>이름</label>
+        <input type="text" value="홍길동">
+
+        <label>이메일</label>
+        <input type="email" value="hong@example.com">
+
+        <label>연락처</label>
+        <input type="text" value="010-1234-5678">
+
+        <label>주소</label>
+        <input type="text" value="서울특별시 강남구 역삼동">
+
+        <div class="form-buttons">
+            <button class="btn cancel-btn" onclick="location.href='isekai-mkt_mypage.html'">취소</button>
+            <button class="btn save-btn">저장</button>
+        </div>
+    </div>
+    <!--푸터-->
+    <footer>
+        &copy; 2025 이세계 마켓. All rights reserved. 문의: help@isekai-mkt.com
+    </footer>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>이세계 마켓 - 고객센터</title>
+  <style>
+    body { margin: 0; font-family: Arial, sans-serif; background: #f3f6fa; }
+
+    /* 상단/네비 동일 */
+    .topbar { display: flex; justify-content: space-between; align-items: center; padding: 8px 32px; background: #1b3552; }
+    .logo-area { display: flex; align-items: center; }
+    .logo-area img { height: 40px; margin-right: 10px; cursor: pointer; }
+    .logo-area .site-name { font-size: 1.6em; color: #fff; font-weight: bold; text-decoration: none; }
+    .top-links a { color: #96b2d6; margin-left: 20px; text-decoration: none; font-size: 1em; }
+    .top-links a:hover { color: #fff; text-decoration: underline; }
+
+    nav { background: #25406b; padding: 12px 0; text-align: center; }
+    nav ul { list-style: none; margin: 0; padding: 0; display: inline-block; }
+    nav ul li { display: inline-block; }
+    nav ul li a { color: #f3f6fa; padding: 8px 24px; text-decoration: none; font-weight: bold; }
+    nav ul li a:hover { background: #1b3552; border-radius: 4px; }
+
+    .banner { background: linear-gradient(90deg, #1b3552, #3d587a); color: #fff; text-align: center; padding: 35px 10px; font-size: 1.2em; }
+
+    /* 고객센터 컨텐츠 */
+    .cs-container { max-width: 900px; margin: 40px auto; background: #fff; border-radius: 12px; box-shadow: 0 5px 16px rgba(27, 53, 82, 0.12); padding: 30px; }
+    .cs-container h2 { color: #1b3552; margin-bottom: 15px; }
+    .faq { margin-top: 20px; }
+    .faq h3 { color: #25406b; margin-bottom: 10px; }
+    .faq-item { border-bottom: 1px solid #ececec; padding: 12px 0; }
+    .faq-item strong { color: #1b3552; display: block; margin-bottom: 6px; }
+
+    .contact { margin-top: 30px; padding: 20px; background: #f9fafc; border-radius: 8px; }
+    .contact h3 { margin-top: 0; color: #25406b; }
+    .contact p { margin: 6px 0; }
+
+    footer { background: #25406b; color: #f3f6fa; text-align: center; padding: 12px; font-size: 0.93em; margin-top: 40px; }
+  </style>
+</head>
+<body>
+  <!-- 상단 -->
+  <div class="topbar">
+    <div class="logo-area">
+      <a href="isekai-mkt_main.html"><img src="img/generated-image (2).png" alt="로고"></a>
+      <a href="isekai-mkt_main.html" class="site-name">이세계 마켓</a>
+    </div>
+    <div class="top-links">
+      <a href="isekai-mkt_login.html">로그인</a>
+      <a href="isekai-mkt_mypage.html">마이페이지</a>
+      <a href="isekai-mkt_cart.html">장바구니</a>
+      <a href="isekai-mkt_cs.html">고객센터</a>
+    </div>
+  </div>
+
+  <!-- 네비 -->
+  <nav>
+    <ul>
+      <li><a href="#">카테고리</a></li>
+      <li><a href="isekai-mkt_new.html">신상품</a></li>
+      <li><a href="isekai-mkt_best.html">베스트</a></li>
+      <li><a href="isekai-mkt_event.html">이벤트</a></li>
+      <li><a href="isekai-mkt_brand.html">브랜드관</a></li>
+    </ul>
+  </nav>
+
+  <!-- 배너 -->
+  <div class="banner">📞 이세계 마켓 고객센터 - 무엇을 도와드릴까요?</div>
+
+  <!-- 컨텐츠 -->
+  <section class="cs-container">
+    <h2>자주 묻는 질문 (FAQ)</h2>
+    <div class="faq">
+      <div class="faq-item">
+        <strong>Q. 배송은 얼마나 걸리나요?</strong>
+        <p>A. 일반적으로 결제 완료 후 2~3일 내에 발송됩니다.</p>
+      </div>
+      <div class="faq-item">
+        <strong>Q. 교환/반품은 어떻게 하나요?</strong>
+        <p>A. 마이페이지 > 주문내역에서 교환/반품 신청이 가능합니다.</p>
+      </div>
+      <div class="faq-item">
+        <strong>Q. 회원탈퇴는 어디서 할 수 있나요?</strong>
+        <p>A. 마이페이지 > 회원정보 수정 메뉴에서 가능합니다.</p>
+      </div>
+    </div>
+
+    <div class="contact">
+      <h3>고객센터 문의</h3>
+      <p>운영시간: 평일 09:00 ~ 18:00</p>
+      <p>전화번호: 1234-5678</p>
+      <p>이메일: help@isekai-mkt.com</p>
+    </div>
+  </section>
+
+  <!-- 푸터 -->
+  <footer>&copy; 2025 이세계 마켓. All rights reserved. 문의: help@isekai-mkt.com</footer>
+</body>
+</html>
